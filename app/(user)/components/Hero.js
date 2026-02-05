@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section
-      className="relative mt-22 min-h-[100vh] max-h-[830px] w-full flex items-end overflow-hidden pb-16 sm:pb-20 lg:pb-24"
+      className="relative mt-22 h-auto lg:min-h-[100vh]  min-h-[80vh]  w-full flex items-end overflow-hidden pb-16 sm:pb-20 lg:pb-24"
       >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -33,18 +33,15 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container absolute left-7 bottom-20 mx-auto md:px-0 px-4 sm:px-8">
+      <div className="container absolute lg:left-7 left-0 bottom-20 mx-auto md:px-0 px-4 sm:px-8">
         <div className="max-w-4xl pt-2 md:items-center">
           {/* Heading */}
-          <h1 className="font-bold  leading-none mb-6 tracking-tight text-3xl sm:text-5xl ">
-            <span className="block text-black">our gateway to earning freedom</span>
-            <span className="text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
-              wherever you are.
-            </span>
+          <h1 className="font-bold h-auto  leading-none mb-6 tracking-tight text-3xl sm:text-5xl ">
+            <span className="block text-black">our gateway to earning freedom<span className="text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]"> wherever you are.</span></span>
           </h1>
 
           {/* Subtext */}
-          <p className="max-w-lg mb-10 leading-none sm:text-[17px]  text-base text-black/80 ">
+          <p className="max-w-lg mb-10 leading-none text-[17px] text-black/80 ">
             Experience curated shopping made simple, secure, and seamless.
           </p>
 
@@ -53,14 +50,14 @@ export default function Hero() {
             href="/services"
             className="group hover:translate-x-10 relative inline-flex items-center bg-black rounded-full  transition-all duration-500 ease-in-out w-fit"
           >
-            <div className="order-2  absolute -right-10 group-hover:-left-10   flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black text-white   transition-all duration-1000 ease-in-out">
+            <div className="order-2  absolute -right-10 group-hover:-left-10   flex items-center justify-center w-10 h-10 rounded-full bg-black text-white   transition-all duration-1000 ease-in-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="w-3.5 h-3.5 sm:w-3.5 sm:h-3.5  font-bold"
+                className="w-3.5 h-3.5   font-bold"
               >
                 <path
                   strokeLinecap="round"
@@ -70,7 +67,7 @@ export default function Hero() {
               </svg>
             </div>
 
-            <span className="order-1 z-10 text-white  text-sm sm:text-base px-7 py-2 whitespace-nowrap">
+            <span className="order-1 z-10 text-white  text-base px-7 py-2 whitespace-nowrap">
               Browse Our Services
             </span>
           </Link>

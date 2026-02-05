@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <>
-      <header className=" h-24 fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+      <header className="shadow-lg h-24 fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
         <div className="md:px-14 px-4  w-full h-full pt-4">
           <div className=" flex items-center justify-between">
             {/* Logo */}
@@ -40,7 +40,7 @@ export default function Header() {
                   alt="Elyvion"
                   width={60}
                   height={60}
-                  className="w-14 h-14 sm:w-16 sm:h-14 lg:w-20 lg:h-16 xl:w-24 xl:h-20 object-contain"
+                  className="w-20 h-20  object-contain"
                 />
               </div>
             </Link>
@@ -133,7 +133,7 @@ export default function Header() {
               className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
             >
               <svg
-                className="w-6 h-6"
+                className="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
