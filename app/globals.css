@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+/* Brand marquee animation */
+@keyframes brand-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: brand-scroll 22s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .animate-scroll {
+    animation-duration: 30s;
+  }
+}
