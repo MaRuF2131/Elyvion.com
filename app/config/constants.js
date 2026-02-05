@@ -99,14 +99,15 @@ export const AWARDS = [
 ];
 
 export const BRANDS = [
-  "LUMENE",
-  "NEPTUNE",
-  "verylazy",
-  "ΔPASSENGER",
-  "Premier Inn",
-  "UNI\nQLD",
-  "ACAI",
-  "HJ Crimes.",
-  "Arla",
+  { name: "Lumene", logo: "/brands/company1.png" },
+  { name: "Neptune", logo: "/brands/Easyjet-Holidays-Ciyzil3W.png" },
+  { name: "Verylazy", logo: "/brands/Lumene-Logo-Bo_hRYRn.png" },
+  { name: "Passenger", logo: "/brands/Neptune-logo-Cbk0LK7l.jpg" },
+  { name: "Premier Inn", logo: "/brands/NEW-Very-Lazy-logos_black-DLr25dWp.png" },
+  { name: "Uniqlo", logo: "/brands/Passenger-Logo-Rectangle-Outline-Box-V2-Black-CAfMuM_n.png" },
+  { name: "Acai", logo: "/brands/Premier-Inn-D26Ark0T.png" },
+  { name: "HJ Crimes", logo: "/brands/UNIQLO_logo-C0xzmNex.png" },
+  { name: "Arla", logo: "/brands/Untitled-design-24-DLjQVW1W.png" },
+  { name: "Arla", logo: "/brands/company1.png" },
 ];
 
