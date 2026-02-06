@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { AWARDS } from '../../config/constants';
 import Link from 'next/link';
+import { AWARDS } from '../../config/constants';
 
 export default function AwardsSection() {
   return (
@@ -17,7 +17,7 @@ export default function AwardsSection() {
                 alt="Elyvion Team"
                 fill
                 className="object-fit rounded-3xl w-full h-full object-center"
-                priority   
+                priority
               />
             </div>
           </div>
@@ -69,31 +69,31 @@ export default function AwardsSection() {
             </ul>
 
             {/* Button Group - Exact same as your HTML */}
-          <Link
-            href="/services"
-            className="group hover:translate-x-10 relative inline-flex items-center bg-black rounded-full  transition-all duration-500 ease-in-out w-fit"
-          >
-            <div className="order-2  absolute -right-10 group-hover:-left-10   flex items-center justify-center w-10 h-10 rounded-full bg-black text-white   transition-all duration-1000 ease-in-out">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-3.5 h-3.5   font-bold"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </div>
+            <Link
+              href="/services"
+              className="group hover:translate-x-10 relative inline-flex items-center bg-black rounded-full  transition-all duration-500 ease-in-out w-fit"
+            >
+              <div className="order-2  absolute -right-10 group-hover:-left-10   flex items-center justify-center w-10 h-10 rounded-full bg-black text-white   transition-all duration-1000 ease-in-out">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-3.5 h-3.5   font-bold"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </div>
 
-            <span className="order-1 z-10 text-white  text-base px-7 py-2 whitespace-nowrap">
-              Learn More
-            </span>
-          </Link>
+              <span className="order-1 z-10 text-white  text-base px-7 py-2 whitespace-nowrap">
+                Learn More
+              </span>
+            </Link>
           </div>
         </div>
       </div>
