@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { BRANDS } from "../../config/constants";
+import Image from 'next/image';
+import { BRANDS } from '../../config/constants';
 
 export default function BrandsCarousel() {
   return (

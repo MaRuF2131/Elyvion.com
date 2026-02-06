@@ -10,7 +10,6 @@ export default function BrandsAndCTA() {
       <section className="w-full bg-white border-t border-gray-100">
         <div className="px-4 md:px-14 mx-auto py-10 md:py-14">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6">
-            
             {/* LEFT TEXT */}
             <div className="w-full md:w-fit md:h-[100px] p-2 text-center md:text-left shrink-0">
               <h2 className="text-lg md:text-base font-semibold text-black leading-tight">
@@ -63,12 +62,15 @@ export default function BrandsAndCTA() {
         .animate-scroll {
           display: flex;
           width: max-content;
-          animation: scroll 10s linear infinite;
+          /* Speed komanor jonno duration bariye 30s kora hoyeche */
+          animation: scroll 30s linear infinite;
         }
-          
+
+        /* Media query remove kora hoyeche jate sob device e eki speed thake */
         @media (min-width: 768px) {
           .animate-scroll {
-            animation: scroll 8s linear infinite;
+            /* Desktop eo slow thakbe */
+            animation: scroll 30s linear infinite;
           }
         }
       `}</style>

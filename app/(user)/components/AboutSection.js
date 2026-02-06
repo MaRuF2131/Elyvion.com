@@ -16,7 +16,7 @@ export default function AboutSection() {
                 alt="Elyvion Team"
                 fill
                 className="object-fit rounded-3xl w-full h-full object-center"
-                priority   
+                priority
               />
             </div>
           </div>
@@ -38,37 +38,36 @@ export default function AboutSection() {
             <p className="text-base leading-snug text-black  mb-6">
               Founded in 2010 by serial entrepreneurs, Elyvion was built to
               bring together a versatile team of senior experts dedicated to
-              helping businesses of all sizes thrive.
-              Today, we're a team of 40+ entrepreneurs with a proven track
-              record of success.
+              helping businesses of all sizes thrive. Today, we're a team of 40+
+              entrepreneurs with a proven track record of success.
             </p>
 
             {/* Button Group - Exact same as your HTML */}
-          <Link
-            href="/services"
-            className="group hover:translate-x-10 relative inline-flex items-center bg-black rounded-full  transition-all duration-500 ease-in-out w-fit"
-          >
-            <div className="order-2  absolute -right-10 group-hover:-left-10   flex items-center justify-center w-10 h-10 rounded-full bg-black text-white   transition-all duration-1000 ease-in-out">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="w-3.5 h-3.5   font-bold"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </div>
+            <Link
+              href="/services"
+              className="group hover:translate-x-10 relative inline-flex items-center bg-black rounded-full  transition-all duration-500 ease-in-out w-fit"
+            >
+              <div className="order-2  absolute -right-10 group-hover:-left-10   flex items-center justify-center w-10 h-10 rounded-full bg-black text-white   transition-all duration-1000 ease-in-out">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-3.5 h-3.5   font-bold"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </div>
 
-            <span className="order-1 z-10 text-white  text-base px-7 py-2 whitespace-nowrap">
-              See Our Services
-            </span>
-          </Link>
+              <span className="order-1 z-10 text-white  text-base px-7 py-2 whitespace-nowrap">
+                See Our Services
+              </span>
+            </Link>
           </div>
         </div>
       </div>
