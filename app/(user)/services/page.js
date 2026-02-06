@@ -1,6 +1,8 @@
-import ServicesCards from "./ServicesCards";
 import ServiceSection from "./ServiceSection";
 import ServiceBrandsCarousel from "./ServiceBrandsCarousel";
+import ServicesCards from "./ServicesCards";
+import CTASection from "../components/CTASection";
+
 
 export default function ServicesPage() {
   return (
@@ -8,6 +10,7 @@ export default function ServicesPage() {
       <ServiceSection />
       <ServicesCards />
       <ServiceBrandsCarousel />
+      <CTASection />
     </div>
   );
 }

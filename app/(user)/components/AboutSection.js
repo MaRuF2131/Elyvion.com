@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AboutSection() {
   return (
@@ -43,79 +44,31 @@ export default function AboutSection() {
             </p>
 
             {/* Button Group - Exact same as your HTML */}
-            <div
-              className="inline-flex items-center justify-between transition-all duration-300 ease-in-out cursor-pointer"
-              style={{ width: '240px' }}
-            >
-              {/* Left Circle Button (hidden) */}
-              <div
-                className="flex items-center justify-center bg-black rounded-full transition-all duration-300 ease-in-out overflow-hidden"
-                style={{
-                  width: '0px',
-                  height: '40px',
-                  opacity: 0,
-                  transform: 'scale(0)',
-                  flexShrink: 0,
-                }}
+          <Link
+            href="/services"
+            className="group hover:translate-x-10 relative inline-flex items-center bg-black rounded-full  transition-all duration-500 ease-in-out w-fit"
+          >
+            <div className="order-2  absolute -right-10 group-hover:-left-10   flex items-center justify-center w-10 h-10 rounded-full bg-black text-white   transition-all duration-1000 ease-in-out">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-3.5 h-3.5   font-bold"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
+                <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="lucide lucide-arrow-right h-4 w-4 text-white"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </div>
-
-              {/* Main Button */}
-              <button
-                className="
-                  px-6 py-2 bg-black text-white font-medium rounded-full
-                  transition-all duration-300 ease-in-out
-                  flex-grow cursor-pointer
-                  hover:shadow-md
-                "
-                style={{ width: 'calc(100% - 48px)' }}
-              >
-                See Our Services
-              </button>
-
-              {/* Right Circle Button */}
-              <div
-                className="flex items-center justify-center bg-black rounded-full transition-all duration-300 ease-in-out overflow-hidden"
-                style={{
-                  width: '40px',
-                  height: '40px',
-                  opacity: 1,
-                  transform: 'scale(1)',
-                  flexShrink: 0,
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-arrow-right h-4 w-4 text-white"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </div>
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
             </div>
+
+            <span className="order-1 z-10 text-white  text-base px-7 py-2 whitespace-nowrap">
+              See Our Services
+            </span>
+          </Link>
           </div>
         </div>
       </div>

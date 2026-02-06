@@ -67,25 +67,25 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-0">
+    <section className="py-24  bg-gray-50">
+      <div className=" px-6">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black">
+          <h2 className="text-4xl  font-bold text-black">
             Our full-service<br />offering...
           </h2>
           
           <Link
             href="/services"
-            className="group inline-flex items-center bg-black rounded-full p-1.5 pr-6 hover:pr-1.5 hover:pl-6 transition-all duration-500 ease-in-out w-fit"
+            className="group mr-11 hover:translate-x-10 relative inline-flex items-center bg-black rounded-full  transition-all duration-500 ease-in-out w-fit"
           >
-            <div className="order-2 group-hover:order-1 flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 text-white group-hover:bg-white group-hover:text-black transition-colors duration-300">
+            <div className="order-2  absolute -right-10 group-hover:-left-10   flex items-center justify-center w-10 h-10 rounded-full bg-black text-white   transition-all duration-1000 ease-in-out">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="w-4 h-4 sm:w-5 sm:h-5"
+                className="w-3.5 h-3.5   font-bold"
               >
                 <path
                   strokeLinecap="round"
@@ -95,8 +95,8 @@ export default function ServicesSection() {
               </svg>
             </div>
 
-            <span className="order-1 group-hover:order-2 text-white font-medium text-sm sm:text-base px-3 whitespace-nowrap">
-              View all services
+            <span className="order-1 z-10 text-white  text-base px-7 py-2 whitespace-nowrap">
+              View All Services
             </span>
           </Link>
         </div>
@@ -132,11 +132,11 @@ export default function ServicesSection() {
                       </svg>
                     )}
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">{service.title}</h3>
+                  <h3 className="text-2xl  font-bold text-black">{service.title}</h3>
                 </div>
 
                 {/* Description */}
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
+                <p className="text-base font-semibold text-black mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
@@ -149,14 +149,14 @@ export default function ServicesSection() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <span className="text-sm sm:text-base text-gray-800">{feature}</span>
+                      <span className="text-base text-gray-800">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* CTA Button */}
                 <button 
-                  className="w-full py-3 border-2 border-black rounded-full text-base sm:text-lg font-medium text-gray-900 hover:bg-black hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  className="w-full py-2 border-2 border-black rounded-full text-base  font-medium text-gray-900 hover:bg-black hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                   aria-label={`Initiate ${service.title} campaign`}
                 >
                   Initiate Campaign

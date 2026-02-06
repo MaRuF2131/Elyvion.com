@@ -19,22 +19,20 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-black text-white py-12 mb-7 sm:py-16 md:py-20 pb-20 lg:pb-16">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+    <footer className="bg-black text-white  mb-7  pb-20 pt-30 ">
+      <div className="px-10">
+        <div className="flex flex-wrap flex-col lg:flex-row justify-start items-start gap-10 md:gap-40 ">
           {/* Logo */}
-          <div>
-              <Image src="/logo/logo.png" alt="Elyvion" width={200} height={200} />
+          <div className="w-fit">
+              <Image src="/logo/logo.png" alt="Elyvion" width={200} height={200} className="w-fit" />
      
           </div>
 
-          {/* Spacing column */}
-          <div className="hidden lg:block"></div>
 
           {/* Our Services */}
           <div>
-            <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Our Services</h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <h4 className="text-base  font-bold mb-4 ">Our Services</h4>
+            <ul className="space-y-1">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
                   <Link 
@@ -50,8 +48,8 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Company</h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <h4 className="text-base font-bold mb-4 ">Company</h4>
+            <ul className="space-y-1">
               {companyLinks.map((link) => (
                 <li key={link.name}>
                   <Link 
