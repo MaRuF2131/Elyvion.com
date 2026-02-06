@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ServiceSection() {
   return (
-    <section className="w-full py-10 md:py-16 px-3 md:px-8 lg:px-12 bg-white md:mt-20">
+    <section className="w-full py-10 md:py-16 px-3 md:px-16 lg:px-12 bg-white md:mt-20">
       <div className="w-full mx-auto grid md:grid-cols-2 gap-4 md:gap-8 items-stretch">
 
         {/* Left Side */}
