@@ -2,16 +2,15 @@
 
 export default function CertificateSection() {
   return (
-    <section className="py-0  bg-gray-50">
-      <div className="px-6">
-        <div className="bg-white border-1 border-black rounded-3xl p-6 ">
-          <div className="flex flex-col  items-center justify-between gap-6">
+    <section className="px-2 md:px-6 lg:px-10 xl:px-11 2xl:px-20  bg-gray-50">
+        <div className="bg-white border-1 border-black rounded-3xl  p-6 ">
+          <div className="flex flex-col  items-start justify-start gap-6">
             
             {/* Icon + Content */}
-            <div className="flex flex-col  items-start gap-4 sm:gap-6 flex-1">
+            <div className="flex flex-col  items-start gap-4 sm:gap-x-6 flex-1">
               
               {/* Icon circle */}
-              <div className=" w-full inline-flex items-center justify-start gap-4 p-4 rounded-full">
+              <div className=" w-full inline-flex items-center justify-start gap-4  rounded-full">
                 <svg className="w-8 h-8 sm:w-10 sm:h-10 text-teal-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                 </svg>
@@ -41,7 +40,6 @@ export default function CertificateSection() {
 
           </div>
         </div>
-      </div>
     </section>
   );
 }
