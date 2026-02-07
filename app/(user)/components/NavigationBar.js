@@ -44,7 +44,7 @@ export default function NavigationBar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex flex-col items-center justify-center min-w-[60px] py-2 px-3 group focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 rounded-lg"
+                className="flex flex-col items-center justify-center min-w-[60px] py-2 px-3 group    rounded-lg"
                 aria-label={item.name}
                 aria-current={isActive ? 'page' : undefined}
               >
