@@ -88,9 +88,9 @@ export default function ServicesSection() {
             className="flex gap-8  overflow-x-auto w-full scrollbar-hide scroll-smooth "
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            {SERVICES.map((service) => (
+            {SERVICES.map((service, index) => (
               <article 
-                key={service.id}
+                key={index}
                 className="service-card  flex-shrink-0 w-full md:w-[calc(50%-16px)] lg:w-[calc(33%-20px)] bg-white rounded-3xl p-6 sm:p-8 shadow-lg border-t-4 border-black flex flex-col"
               >
                 {/* Icon and Title */}

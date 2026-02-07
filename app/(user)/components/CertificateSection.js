@@ -51,7 +51,7 @@ export default function CertificateSection() {
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Certificate of Incorporation</h3>
             </div>
             <p className="text-base text-gray-600 leading-relaxed">
-              View our official Certificate of Incorporation issued by Companies House.
+              View our official Certificate of Incorporation issued by Companies House. This document verifies our status as a registered private limited company in accordance with the Companies Act 2006.
             </p>
           </div>
           <div className="w-full text-right">
