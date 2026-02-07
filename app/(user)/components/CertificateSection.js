@@ -64,17 +64,17 @@ export default function CertificateSection() {
 
       {/* --- PopUp --- */}
       {isOpen && (
-        <div className="fixed inset-0 z-[999] shadow-2xl flex items-center justify-center   bg-black/50 backdrop-blur-none">
-          <div className="relative w-full max-w-4xl p-7  bg-white rounded-lg shadow-2xl flex flex-col h-full max-h-[90vh] overflow-hidden">
+        <div className="fixed inset-0 z-[999] shadow-2xl flex items-center justify-center px-4 sm:p-0  bg-black/50 backdrop-blur-none">
+          <div className="relative w-full sm:max-w-md md:max-w-2xl lg:max-w-4xl p-7  bg-white rounded-lg shadow-2xl flex flex-col h-full max-h-[90vh] overflow-hidden">
             
             {/* header part */}
             <div className="flex items-center justify-between pb-5 ">
-              <h2 className="text-sm md:text-lg font-semibold text-black">Certificate of Incorporation</h2>
+              <h2 className=" text-lg font-semibold text-black sm:text-start text-center w-full">Certificate of Incorporation</h2>
               <button onClick={toggleModal} className="text-gray-700 hover:text-black text-2xl leading-none">&times;</button>
             </div>
             <div className=" overflow-auto ">
               {/* Inner part */}
-              <div className="flex-1 min-h-screen h-full  border-5 border-gray-100 rounded-tl-md rounded-bl-md bg-white p-2 sm:p-6 flex flex-col items-center">
+              <div className="flex-1  max-h-[600px] h-screen  border-5 border-gray-100 rounded-tl-md rounded-bl-md bg-white p-2 sm:p-6 flex flex-col items-center">
                 <div className="relative w-[350px] h-full max-h-[500px] shadow-md rounded-md  bg-white overflow-hidden">
                   <Image 
                     src={images[currentIndex]} 
@@ -111,10 +111,10 @@ export default function CertificateSection() {
             </div>
 
             {/* close button */}
-            <div className=" pt-4  flex justify-end">
+            <div className=" pt-4  flex sm:justify-end justify-center">
               <button 
                 onClick={toggleModal}
-                className="px-4 py-2  bg-gray-50  text-base rounded-lg shadow-sm  text-gray-700 hover:bg-gray-100 transition-colors"
+                className="px-4 py-2 sm:w-auto w-full bg-gray-50  text-base rounded-lg shadow-sm  text-gray-700 hover:bg-gray-100 transition-colors"
               >
                 Close
               </button>
