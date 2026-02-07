@@ -29,7 +29,7 @@ export default function InitiateCampaign() {
             <div className="border border-slate-600 rounded-xl p-4 md:gap-y-2 bg-white flex flex-col justify-between h-28 sm:aspect-4/3 md:aspect-auto md:h-20">
               <div>
                 <p className="text-[16px] md:text-xs text-slate-400 md:font-medium text-semibold leading-none mb-2">Account Balance</p>
-                <p className="text-sm md:text-base font-semibold text-slate-900 leading-none">RM -6,965.00</p>
+                <p className="md:text-base text-xl font-semibold text-slate-900 leading-none">RM -6,965.00</p>
               </div>
               <p className="text-[10px] md:text-xs pb-1 text-red-500 font-bold">
                 Insufficient Balance
@@ -39,19 +39,19 @@ export default function InitiateCampaign() {
             {/* Number of Campaigns */}
             <div className="border border-slate-600 rounded-xl p-4 bg-white flex flex-col justify-start h-28 sm:aspect-4/3 md:aspect-auto md:h-20">
               <p className="text-[16px] md:text-xs text-slate-400 md:font-medium text-semibold leading-none mb-2">Number of Campaigns</p>
-              <p className="text-sm md:text-base font-semibold text-slate-900">30/30</p>
+              <p className="md:text-base text-xl font-semibold text-slate-900">30/30</p>
             </div>
 
             {/* Today's Commission */}
             <div className="border border-slate-600 rounded-xl p-4 bg-white flex flex-col justify-start h-28 sm:aspect-4/3 md:aspect-auto md:h-20">
               <p className="text-[16px] md:text-xs text-slate-400 md:font-medium text-semibold leading-none mb-2">Today's Commission</p>
-              <p className="text-sm md:text-base font-semibold text-slate-900">RM 0.00</p>
+              <p className="md:text-base text-xl font-semibold text-slate-900">RM 0.00</p>
             </div>
 
             {/* Withdrawal Amount */}
             <div className="border border-slate-600 rounded-xl p-4 bg-white flex flex-col justify-start h-28 sm:aspect-4/3 md:aspect-auto md:h-20">
               <p className="text-[16px] md:text-xs text-slate-400 md:font-medium text-semibold leading-none mb-2">Withdrawal Amount</p>
-              <p className="text-sm md:text-base font-semibold text-slate-900">RM 24,427.50</p>
+              <p className="md:text-base text-xl font-semibold text-slate-900">RM 24,427.50</p>
             </div>
 
             {/* Trial Balance (Full Width) */}
