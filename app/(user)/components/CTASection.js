@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function CTASection() {
   return (
-    <section className="pt-14 sm:pt-16 bg-transparent mb-14 sm:mb-14 md:-mb-14 relative z-10">
-      <div className="relative px-6 sm:px-8 md:px-24">
+    <section className="px-6 sm:px-8 xl:px-24 pt-14 sm:pt-16 bg-transparent mb-14 sm:mb-14 md:-mb-25 relative z-20">
+      <div className="relative w-full ">
         {/* decorative icon */}
-        <span className="absolute left-2 sm:left-8 md:left-12 -top-5 sm:-top-5">
+        <span className="absolute -left-7  -top-7 ">
           <svg
             viewBox="0 0 35 33"
             className="fill-current text-black w-6 h-6 sm:w-8 sm:h-8"
@@ -17,9 +17,9 @@ export default function CTASection() {
           </svg>
         </span>
 
-        <div className="grid sm:grid-cols-2 items-stretch bg-gradient-to-br from-[#0f5366] to-[#166e85] rounded-2xl sm:rounded-3xl overflow-hidden">
+        <div className="grid sm:grid-cols-2 grid-cols-1 items-stretch bg-gradient-to-br from-[#0f5366] to-[#166e85] rounded-2xl sm:rounded-3xl overflow-hidden">
           {/* Content */}
-          <div className="p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col justify-end items-start">
+          <div className="p-6  sm:h-auto sm:p-8 md:p-12 lg:p-16 flex flex-col justify-end items-start">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight mb-5 sm:mb-6 lg:mb-8">
               Grow with us. With Elyvion.
             </h2>
@@ -65,9 +65,9 @@ export default function CTASection() {
 
           {/* Logo */}
           <div
-            className="relative flex items-center justify-center
-          min-h-[180px] sm:min-h-[240px] md:min-h-[320px] lg:min-h-[380px]
-          bg-gradient-to-br from-gray-900 to-black p-6 sm:p-8"
+            className="relative flex items-center justify-center 
+            sm:min-h-[330px] min-h-[230px] sm:max-h-[180px] md:min-h-[430px] xl:min-h-[460px]
+          bg-gradient-to-br from-gray-900 to-black p-0 md:p-8"
           >
             <Image
               src="/logo/logo.png"
