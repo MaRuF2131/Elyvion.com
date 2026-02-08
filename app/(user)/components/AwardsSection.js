@@ -10,8 +10,8 @@ export default function AwardsSection() {
       <div className=" mx-auto px-5 md:px-10 lg:px-17 xl:px-30 2xl:px-48 h-auto ">
         <div className="flex flex-wrap flex-col md:flex-row md:flex-nowrap md:justify-between items-center md:gap-12  min-h-[450px] xl:min-h-[500px]  items-between justify-center">
           {/* Left Column: Image - বড় হবে এবং Y-axis বরাবর সম্পূর্ণ */}
-          <div className="relative  order-1 md:order-2 md:w-[42%] lg:w-[47%]  w-full lg:max-w-full max-w-[500px] min-h-[450px] xl:h-[480px] flex items-center justify-center">
-            <div className="  relative order-1 md:order-2 w-full  max-w-[500px] max-h-[400px] h-[390px] md:aspect-[12/9] xl:aspect-[10/8] md:h-auto xl:h-[480px] lg:max-w-full  overflow-hidden">
+          <div className="relative md:py-0 py-8 order-1 md:order-2 md:w-[42%] lg:w-[47%]  w-full lg:max-w-full max-w-[500px] md:min-h-[450px] xl:h-[480px] flex items-center justify-center">
+            <div className="  relative order-1 md:order-2 w-full aspect-square  max-w-[500px] max-h-[400px] md:h-[390px] md:aspect-[12/9] xl:aspect-[10/8] md:h-auto xl:h-[480px] lg:max-w-full  overflow-hidden">
               <Image
                 src="/images/wining.png"
                 alt="Elyvion Team"
