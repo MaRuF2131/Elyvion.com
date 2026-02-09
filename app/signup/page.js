@@ -100,12 +100,11 @@ export default function RegisterPage() {
           </div>
 
           {/* Gender */}
-          <div>
+          <div className="flex flex-col">
             <label className="text-sm font-semibold">Gender</label>
-            <select name="gender" value={formData.gender} onChange={handleChange} className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg">
+            <select name="gender" value={formData.gender} onChange={handleChange} className="max-w-[25%] mt-1 px-3 py-2 border border-gray-300 rounded-lg">
               <option>Male</option>
               <option>Female</option>
-              <option>Other</option>
             </select>
           </div>
 
