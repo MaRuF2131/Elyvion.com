@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import axiosInstance from "@/utils/api/axios";
+import { signIn } from "next-auth/react";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -30,23 +32,55 @@ export default function RegisterPage() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setError("");
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError("");
 
-    if (!formData.username || !formData.phone || !formData.password) {
-      return setError("Please fill all required fields");
-    }
-    if (formData.password !== formData.confirmPassword) {
-      return setError("Passwords do not match");
-    }
-    if (!formData.terms) {
-      return setError("You must accept Terms & Conditions");
+  if (!formData.username || !formData.phone || !formData.password) {
+    return setError("Please fill all required fields");
+  }
+  if (formData.password !== formData.confirmPassword) {
+    return setError("Passwords do not match");
+  }
+  if (!formData.terms) {
+    return setError("You must accept Terms & Conditions");
+  }
+
+  try {
+    //  Call backend to create user
+    const res = await axiosInstance.post(`/users/register`, {
+        userName: formData.username,
+        phoneNumber: formData.phone,
+        password: formData.password,
+        gender: formData.gender,
+        referral: formData.referral,
+    });
+    
+
+    if (!res?.data?.success) {
+      return setError(res?.data?.error || "Registration failed");
     }
 
-    // API call here
-    router.push("/login");
-  };
+    console.log("User registered:", res?.data);
+    //  Auto-login via NextAuth CredentialsProvider
+    const loginRes = await signIn("credentials", {
+      redirect: false,
+      name: formData.username,
+      password: formData.password,
+    });
+
+    if (loginRes?.error) {
+      return setError(loginRes.error);
+    }
+
+    //  Redirect to dashboard
+    router.push("/");
+  } catch (err) {
+    console.error(err);
+    setError(err?.response?.data?.error || "Server error. Try again later.");
+  }
+};
+
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-50 to-teal-50 p-4 pt-10">

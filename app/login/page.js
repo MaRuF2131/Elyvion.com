@@ -5,38 +5,42 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useAuth } from "../context/AuthContext";
+import { signIn } from "next-auth/react";
 
 export default function LoginPage() {
   const router = useRouter();
-  /* const searchParams = useSearchParams(); */
-  const { login, isAuthenticated } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
   const [error, setError] = useState("");
 
-  // Redirect if already authenticated
-  useEffect(() => {
-    if (isAuthenticated) {
-      const redirect = /* searchParams.get("redirect") || */ "/";
-      router.push(redirect);
-    }
-  }, [isAuthenticated, router,/*  searchParams */]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     setError("");
     
     // Basic validation - you can replace this with actual API call
     if (formData.username && formData.password) {
-      // Simulate login - replace with actual authentication logic
-      login();
-      
-      // Redirect to the intended page or home
-      const redirect = /* searchParams.get("redirect")  */ "/";
-      router.push(redirect);
+         try {
+
+              const loginRes = await signIn("credentials", {
+                redirect: false,
+                name: formData.username,
+                password: formData.password,
+              });
+          
+              if (loginRes?.error) {
+                return setError(loginRes.error);
+              }
+          
+              //  Redirect to dashboard
+              router.push("/");
+          
+         } catch (err) {
+               console.error(err);
+               setError(err?.response?.data?.error || "Server error. Try again later.");
+         }
     } else {
       setError("Please enter both username and password");
     }

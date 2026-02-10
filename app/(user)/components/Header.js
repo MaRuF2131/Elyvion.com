@@ -3,8 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { useSession, signOut } from "next-auth/react";
 
 export default function Header() {
+   const { data: session } = useSession();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [customerServiceModalOpen, setCustomerServiceModalOpen] =
     useState(false);
@@ -369,26 +371,53 @@ export default function Header() {
 
           <div className="h-px bg-white/20 my-2"></div>
 
-          <Link
-            href="/login"
-            className="flex items-center gap-4 text-white hover:bg-white/10 py-3 px-4 rounded-lg transition-colors"
-            onClick={() => setSidebarOpen(false)}
+     {session ? (
+        // Logged in → show Sign Out
+        <button
+          onClick={() => {
+            signOut({ callbackUrl: "/login" });
+            setSidebarOpen(false);
+          }}
+          className="flex items-center gap-4 text-white hover:bg-white/10 py-3 px-4 rounded-lg transition-colors"
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-              />
-            </svg>
-            <span className="font-medium">Login</span>
-          </Link>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M17 16l4-4m0 0l-4-4m4 4H7"
+            />
+          </svg>
+          <span className="font-medium">Sign Out</span>
+        </button>
+         ) : (
+        // Not logged in → show Login link
+        <Link
+          href="/login"
+          className="flex items-center gap-4 text-white hover:bg-white/10 py-3 px-4 rounded-lg transition-colors"
+          onClick={() => setSidebarOpen(false)}
+        >
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+            />
+          </svg>
+          <span className="font-medium">Login</span>
+        </Link>
+      )}
         </nav>
       </div>
 
